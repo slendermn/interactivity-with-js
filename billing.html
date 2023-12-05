@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <link rel="stylesheet" type="text/css" href="../css/billing.css">
+    <script type="text/javascript" src="../js/billing.js" defer></script>
+</head>
+<body>
+    <form>
+        <fieldset>
+            <legend>Informations d'expédition</legend>
+            <label for="shippingName">Nom :</label>
+            <input type="text" name="shipName" id="shippingName" required><br />
+            <label for="shippingZip">Code postal :</label>
+            <input type="text" name="shipZip" id="shippingZip" pattern="[0-9]{5}" required><br />
+        </fieldset>
+
+        <input type="checkbox" id="same" name="same" onchange="billingFunction()">
+        <label for="same">Les informations de facturation sont-elles identiques ?</label>
+
+        <fieldset>
+            <legend>Informations de facturation</legend>
+            <label for="billingName">Nom :</label>
+            <input type="text" name="billName" id="billingName" required><br />
+            <label for="billingZip">Code postal :</label>
+            <input type="text" name="billZip" id="billingZip" pattern="[0-9]{5}" required><br />
+        </fieldset>
+
+        <input type="submit" value="Vérifier">
+    </form>
+</body>
+</html>
